@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Splash&display=swap");
+:root {
+  --color-black: rgba(0, 0, 0, 0.75);
+  --color-dark-blue: hsl(221, 56%, 40%);
+  --color-light-blue: hsl(180, 21%, 94%);
+}
+* {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 3px;
+  font-size: 1.2rem;
+  color: var(--color-dark-blue);
+  text-align: center;
+  background-color: hsl(180, 21%, 94%);
+  /* font-family: "Splash", cursive; */
+}
+
+#name-form input {
+  padding: 0.5rem 1rem;
+  border-style: none;
+  border-bottom: 2px solid var(--color-dark-blue);
+  background-color: hsl(180, 21%, 94%);
+}
+#name-form input:active {
+  outline: none;
+  background-color: hsl(180, 21%, 94%);
+}
+#name-form input:focus {
+  outline: none;
+  background-color: hsl(180, 21%, 94%);
+}
+#name-form button {
+  padding: 0.5rem 1rem;
+  box-shadow: 10px 10px 21px -7px var(--color-black);
+  background-color: var(--color-dark-blue);
+  color: var(--color-light-blue);
+  border-style: none;
+  border-radius: 1rem;
+}
+#btn-clear {
+  padding: 0.5rem 1rem;
+  box-shadow: 10px 10px 21px -7px var(--color-black);
+  background-color: var(--color-dark-blue);
+  color: var(--color-light-blue);
+  border-style: none;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+#output-text {
+  width: 60%;
+  margin: 4rem auto;
+  padding: 0;
+  position: relative;
+}
+#output {
+  padding: 3rem 2rem;
+  background-color: rgb(187, 218, 218);
+  box-shadow: 10px 10px 21px -7px var(--color-black);
+}
