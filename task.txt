@@ -4,3 +4,5 @@ DIRBTINIO INTELEKTO API UŽDUOTIS:
 Amžiui - https://agify.io/
 Tautybei - https://nationalize.io/
 Lyčiai - https://genderize.io/
+
+--> sutvarkyti fetch'u nuosekluma
