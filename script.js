@@ -5,6 +5,12 @@ let outputBlockEl = document.querySelector("#output-block");
 nameFormEl.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  let ageEl = document.createElement("span");
+  let genderEl = document.createElement("span");
+  let nationalityEl = document.createElement("span");
+
+  outputEl.textContent = "";
+
   let searchName = event.target.elements.name.value;
   console.log(searchName);
 
@@ -13,7 +19,7 @@ nameFormEl.addEventListener("submit", (event) => {
     .then((data) => {
       let age = data.age;
       let ageText = `Age of ${searchName} is ${age}. `;
-      outputEl.textContent += ageText;
+      ageEl.textContent = ageText;
     });
 
   fetch(`https://api.genderize.io?name=${searchName}`)
@@ -21,11 +27,11 @@ nameFormEl.addEventListener("submit", (event) => {
     .then((data) => {
       let gender = data.gender;
       let probability = data.probability;
-      console.log("gender probability", probability);
+
       let text = `${searchName} is ${gender} (probability ${
         probability * 100
       }%). `;
-      outputEl.textContent += text;
+      genderEl.textContent = text;
     });
 
   fetch(`https://api.nationalize.io?name=${searchName}`)
@@ -33,9 +39,11 @@ nameFormEl.addEventListener("submit", (event) => {
     .then((data) => {
       let countryId = data.country[0].country_id;
       let probability = data.country[0].probability.toFixed(2);
-      let nationalityText = `${searchName} is ${countryId} (probability ${probability}%). `;
-      outputEl.textContent += nationalityText;
+      let nationalityText = `${searchName} is from ${countryId} (probability ${probability}%). `;
+      nationalityEl.textContent = nationalityText;
     });
+
+  outputEl.append(ageEl, genderEl, nationalityEl);
 
   nameFormEl.reset();
 

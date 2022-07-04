@@ -60,3 +60,7 @@
   background-color: var(--color-mid-blue);
   box-shadow: 10px 10px 21px -7px var(--color-black);
 }
+
+span {
+  background-color: var(--color-mid-blue);
+}
